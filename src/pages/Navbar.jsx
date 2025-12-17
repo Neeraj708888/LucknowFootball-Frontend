@@ -1,6 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react"; // npm install lucide-react
 import { Link, useNavigate } from "react-router-dom";
+import {
+  FaInstagram,
+  FaLinkedin,
+  FaTwitter,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 
 const navItems = [
   { name: "/", path: "Home" },
@@ -51,13 +58,67 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 text-dynamic ${
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 text-dynamic bg-gradient-to-r from-green-400 via-yellow-300 to-red-400 ${
         isScrolled
           ? "bg-white shadow-md text-gray-800"
           : "bg-white/10 ackdrop-blur-md text-black"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="absolute top-2 right-6 flex items-center gap-2 z-50">
+        {/* WhatsApp */}
+        <Link
+          to="https://wa.me/919999999999"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-500 hover:text-green-600 text-xl transition-transform hover:scale-110"
+        >
+          <FaWhatsapp />
+        </Link>
+
+        {/* Instagram */}
+        <Link
+          to="https://www.instagram.com/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-500 hover:text-green-600 text-xl transition-transform hover:scale-110"
+        >
+          <FaInstagram />
+        </Link>
+
+        {/* LinkedIn */}
+        <Link
+          to="https://www.linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-500 hover:text-green-600 text-xl transition-transform hover:scale-110"
+        >
+          <FaLinkedin />
+        </Link>
+        {/* Youtube */}
+        <Link
+          to="https://www.linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-red-500 hover:text-green-600 text-xl transition-transform hover:scale-110"
+        >
+          <FaYoutube />
+        </Link>
+        <Link
+          to="https://www.linkedin.com/in/yourprofile"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-purple-500 hover:text-green-600 text-xl transition-transform hover:scale-110"
+        >
+          <FaTwitter />
+        </Link>
+        {/* Free Trial Text */}
+        <p className="text-green-400 font-semibold border border-green-400 px-2 rounded text-md text-center">
+          Free Trial
+        </p>
+      </div>
+
+      <br />
+      <div className="max-w-8xl mx-auto sm:px-6 lg:px-8">
         {/* Main Navbar container */}
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -65,11 +126,13 @@ const Navbar = () => {
             <img
               src="/src/assets/football.jpg"
               alt="Logo"
-              className="h-10 w-10 mr-2 rounded-4xl"
+              className="h-16 w-16 mr-4 mb-5 rounded-4xl"
             />
             <span
-              className={`text-xl font-semibold transition-colors ${
-                isScrolled ? "text-green-800" : "text-green-400"
+              className={`text-2xl font-semibold transition-all duration-300 bg-clip-text text-transparent ${
+                isScrolled
+                  ? "bg-gradient-to-r from-green-900 to-red-600"
+                  : "bg-gradient-to-r from-green-900 to-red-600"
               }`}
             >
               Lucknow Football Club
