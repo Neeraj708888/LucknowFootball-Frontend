@@ -53,7 +53,7 @@ function ContactUs() {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center bg-gray-50 px-4 mt-18">
+    <section className="min-h-screen flex items-center justify-center bg-gray-50 px-4 mt-16">
       <div className="w-full max-w-5xl bg-white rounded-2xl shadow-lg overflow-hidden grid grid-cols-1 md:grid-cols-2">
         {/* Left Section */}
         <div className="bg-gradient-to-br from-indigo-600 to-purple-600 text-white p-8 flex flex-col justify-center">
@@ -63,9 +63,9 @@ function ContactUs() {
           </p>
 
           <div className="space-y-3 text-sm">
-            <p>📧 support@sndigitech.com</p>
+            <p>📧 support@lucknowfootball.com</p>
             <p>📞 +91 98765 43210</p>
-            <p>📍 Delhi, India</p>
+            <p>📍 Lucknow, India</p>
           </div>
         </div>
 
@@ -80,6 +80,7 @@ function ContactUs() {
               onChange={handleChange}
               placeholder="Name"
               required
+              maxLength={30}
               className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500"
             />
 
@@ -91,12 +92,13 @@ function ContactUs() {
               onChange={handleChange}
               placeholder="Email"
               required
+              maxLength={40}
               className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-indigo-500"
             />
 
             {/* Mobile */}
             <input
-              type="tel"
+              type="number"
               name="mobile"
               value={formData.mobile}
               onChange={handleChange}
