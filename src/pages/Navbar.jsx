@@ -69,7 +69,7 @@ const Navbar = () => {
             />
             <span
               className={`text-xl font-semibold transition-colors ${
-                isScrolled ? "text-gray-800" : "text-blue-400"
+                isScrolled ? "text-green-800" : "text-green-400"
               }`}
             >
               Lucknow Football Club

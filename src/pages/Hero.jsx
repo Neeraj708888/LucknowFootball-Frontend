@@ -40,8 +40,8 @@ const Hero = () => {
 
             {/* Text Content */}
             <div className="relative z-10 text-center text-white px-4 sm:px-8 max-w-2xl">
-                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                    Welcome to <span className="text-blue-400">Lucknow Football Club</span>
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-blue-400">
+                    Welcome to <span className="text-green-400">Lucknow Football Club</span>
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl mb-6 leading-relaxed">
